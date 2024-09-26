@@ -127,3 +127,8 @@ h2:after {
 .footer__copyright__text i {
     color: var(--accent);
 }
+
+/* For the active nav tab */
+a.active {
+    border-bottom: 3px solid #FFA86A; /* Orange line for active tab */
+}
