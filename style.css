@@ -132,3 +132,21 @@ h2:after {
 a.active {
     border-bottom: 3px solid #FFA86A; /* Orange line for active tab */
 }
+
+/* Button */
+.btn {
+    display: inline-block;            /* Allow setting width and height */
+    padding: 10px 20px;              /* Adjust padding as needed */
+    color: #FFA86A;                   /* Text color */
+    background-color: transparent;    /* Transparent background */
+    border: 2px solid #FFA86A;        /* Orange border */
+    border-radius: 0;                 /* Remove rounded borders */
+    text-decoration: none;             /* Remove underline from text */
+    font-size: 16px;                  /* Adjust font size */
+    cursor: pointer;                  /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.btn:hover {
+    background-color: rgba(250, 168, 106, 0.2); /* Light orange background on hover */
+}
