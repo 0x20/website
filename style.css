@@ -1,0 +1,129 @@
+:root {
+  --body-bg: #212529;
+  --text: #ffffff;
+  --accent: #42a4b9;
+  --accent: #ea317b;
+  --accent: #FFA86A;
+}
+
+body {
+  --bs-body-font-family: var(--bs-font-monospace);
+  --bs-body-line-height: 1.4;
+  --bs-body-bg: var(--bs-gray-100);
+  background-color:var(--body-bg);
+  color:var(--text);
+}
+
+a {
+	--bs-body-font-family: var(--bs-font-monospace);
+	text-decoration: none;
+	color:var(--text);
+	border-bottom:1px solid var(--text);
+}
+
+.col,[class*="col-"]{
+	margdin-bottom:25px;
+}
+
+.wrapper{
+	/*width:90%;*/
+	margin:0px auto; 
+}
+
+.header{
+	padding:25px 0px;
+	background-image: linear-gradient(to bottom, rgb(33, 37, 41), rgb(33, 37, 41), rgb(33, 37, 41), rgb(33, 37, 41), rgba(255,0,0,0));
+}
+
+.header a{
+	margin:0px 10px;
+}
+
+.header .nav, .header .nav img{
+	height:80px;
+}
+
+.framed{
+	border: 1px solid var(--accent);
+    padding: 20px;
+	
+}
+
+code,highlight {
+    font-feature-settings: normal;
+    background: rgba(255,168,106,0.2);
+    color: var(--accent);
+    padding: 1px 6px;
+    margin: 0 2px;
+    font-size: .95rem
+}
+colored {
+	color: var(--accent);
+}
+
+.img{
+	padding:5px;
+	border:5px solid var(--accent);
+	margin:15px 0px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+	
+	position: relative;
+    color: var(--accent);
+    margin: 0 0 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px dotted var(--accent);
+	margin:20px 0px;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    display: block;
+    width: 100%;
+    border-bottom: 3px dotted var(--accent);
+}
+
+h2 {
+    display: block;
+    font-size: 1.1em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+	
+	position: relative;
+    color: var(--accent);
+    margin: 0 0 15px;
+    padding-bottom: 15px;
+	margin:10px 0px;
+}
+
+h2 a{
+	text-decoration: none;
+	color:var(--accent);
+	border-bottom:1px solid var(--accent);
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    display: block;
+    width: 100%;
+}
+
+
+.footer__copyright__text i {
+    color: var(--accent);
+}
