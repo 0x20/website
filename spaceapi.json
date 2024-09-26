@@ -1,0 +1,69 @@
+{
+    "api": "0.13",
+    "api_compatibility": [
+      "14"
+    ],
+    "space": "Hackerspace.Gent",
+    "logo": "https://mqtt.hackerspace.gent/0x20.png",
+    "url": "https://hackerspace.gent",
+    "location": {
+      "address": "Wiedauwkaai 51, 9032 Gent, Belgium",
+      "lon": 3.72446,
+      "lat": 51.07478
+    },
+    "contact": {
+      "email": "info@hackerspace.gent",
+      "ml": "ghent@discuss.hackerspaces.be",
+      "matrix": "#hackerspace.gent:matrix.org",
+      "mastodon": "@hsg@chaos.social",
+      "twitter": "@hsghent",
+      "facebook": "https://facebook.com/hackerspace.gent"
+    },
+    "issue_report_channels": [
+      "email"
+    ],
+    "state": {
+      "open": false,
+      "lastchange": 1680620718
+    },
+    "sensors": {
+      "temperature": [
+        {
+          "value": 0,
+          "unit": "°C",
+          "location": "air"
+        }
+      ],
+      "door_locked": [
+        {
+          "value": true,
+          "location": "front door"
+        }
+      ],
+      "people_now_present": [
+        {
+          "name": "clarissa",
+          "value": 0,
+          "names": [
+            ""
+          ],
+          "location": "LAN"
+        }
+      ]
+    },
+    "projects": [
+      "https://newline.gent",
+      "https://hackerspace.design",
+      "https://github.com/0x20",
+      "https://gitlab.com/evils/clarissa"
+    ],
+    "membership_plans": [
+      {
+        "name": "regular",
+        "value": 25,
+        "currency": "EUR",
+        "billing_interval": "monthly",
+        "description": "discount rates and yearly invoice also available"
+      }
+    ]
+  }
