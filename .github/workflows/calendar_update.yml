@@ -1,0 +1,21 @@
+name: Update ICS calendar file
+
+env:
+  ICS_URL: https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  merge_new_ics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '2'
+      - name: Download latest ICS file
+        run: |
+          curl -v -O calendar.ics ${ICS_URL}
+      - uses: stefanzweifel/git-auto-commit-action@v4
