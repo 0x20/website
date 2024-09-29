@@ -3,7 +3,9 @@ name: Update ICS calendar file
 env:
   ICS_URL: https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: "0 * * * *"
 
 permissions:
   contents: write
