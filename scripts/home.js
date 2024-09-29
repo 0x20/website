@@ -2,7 +2,7 @@ import ICAL from "https://unpkg.com/ical.js/dist/ical.min.js";
 
 //Adds events to homepage
 
-const icsEndpoint  = 'http://34.23.153.36:3000/api/events';
+const icsEndpoint  = '/calendar.ics';
 
 async function fetchEvents(url) {
     const response = await fetch(url);
