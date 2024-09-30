@@ -4,7 +4,7 @@ const pages = {
     "Home": "index.html",
     "Newline": "newline.html",
     "Events": "events.html",
-    "Contact": "contact.html",
+    "Visiting / Contact": "contact.html",
 };
 
 function createNavbar() {
