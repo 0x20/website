@@ -1,7 +1,7 @@
 name: Update ICS calendar file
 
 env:
-  ICS_URL: https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics
+  ICS_URL: https://calendar.google.com/calendar/ical/info%40hackerspace.gent/public/basic.ics
 
 on:
   schedule:
