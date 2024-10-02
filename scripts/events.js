@@ -23,7 +23,7 @@ function addEvents(target, events) {
                 <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
             </div>
             <div>
-                <p>${event.summary}</colored>
+                <p>${event.description}</colored>
             </div>
         </div>`;
         target.innerHTML += eventHTML;
