@@ -5,18 +5,10 @@ const icsEndpoint  = '/calendar.ics';
 //Adds events to homepage
 async function processEvents(url){
     const events = await fetchEvents(url);
-
-    // Process future events
-    const now = new Date();
-    const closestPastEvents = events
-        .filter((ev) => new Date(ev.start) < now)
-        .sort((a, b) => new Date(b.start) - new Date(a.start)) // Sort by start date
-        .slice(0, 10); // Get the closest 5 future events
-
+    // Sort by start date
+    const closestPastEvents = events.sort((a, b) => new Date(b.start) - new Date(a.start)); 
     // Add events to HTML
     const upcomingEventsList = document.getElementById('upcomingEvents');
-    
-
     addEvents(upcomingEventsList, closestPastEvents);
 }
 
@@ -24,7 +16,16 @@ function addEvents(target, events) {
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
-        const eventHTML = `<colored>${eventDate.toISOString().split('T')[0]}</colored> - <a href="#">${event.summary}</a><br>`;
+        const eventStr = eventDate.toISOString().split('T')[0];
+        const eventHTML = `
+        <div class="framed mb-5">
+            <div class="mb-3">
+                <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
+            </div>
+            <div>
+                <p>${event.summary}</colored>
+            </div>
+        </div>`;
         target.innerHTML += eventHTML;
     });
 }
