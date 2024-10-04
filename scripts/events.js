@@ -1,4 +1,4 @@
-import { fetchEvents, getLastModified } from "./modules/ics-loader.js";
+import { fetchEvents, getLastModified, getLocalIsoString} from "./modules/ics-loader.js";
 
 const icsEndpoint  = '/calendar.ics';
 
@@ -16,7 +16,7 @@ function addEvents(target, events) {
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
-        const eventStr = eventDate.toISOString().split('T')[0];
+        const eventStr = getLocalIsoString(eventDate).split('T')[0];
         const eventHTML = `
         <div class="framed mb-5">
             <div class="mb-3">
@@ -33,7 +33,7 @@ function addEvents(target, events) {
 async function setLastUpdatedTimestamp(icsEndpoint){
     const timeStamp = await getLastModified(icsEndpoint);
     const coloredDiv = document.getElementById("calenderLastUpdated");
-    let [day, hour] = timeStamp.toISOString().split('T');
+    let [day, hour] = getLocalIsoString(timeStamp).split('T');
     hour = hour.split('.')[0];
     coloredDiv.innerHTML = `${day}, ${hour}`;
 }

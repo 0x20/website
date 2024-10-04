@@ -1,4 +1,4 @@
-export {fetchEvents, getLastModified}
+export {fetchEvents, getLastModified, getLocalIsoString}
 
 import ICAL from "https://unpkg.com/ical.js/dist/ical.min.js";
 
@@ -35,4 +35,11 @@ async function getLastModified(filePath) {
     if (lastModified) 
         return new Date(lastModified);
     return null;
+}
+
+//I want to use the ISO notation but with the local timezone instead of the UTC one
+function getLocalIsoString(date){
+    const offset = date.getTimezoneOffset() * 60000;
+    const localTime = new Date(date.getTime() - offset);
+    return localTime.toISOString();
 }
