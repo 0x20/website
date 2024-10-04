@@ -1,9 +1,9 @@
-export {fetchEvents}
+export {fetchEvents, getLastModified}
 
 import ICAL from "https://unpkg.com/ical.js/dist/ical.min.js";
 
-async function fetchEvents(url) {
-    const response = await fetch(url);
+async function fetchEvents(filePath) {
+    const response = await fetch(filePath);
     const data = await response.text();
     var vevents = [];
 
@@ -26,4 +26,13 @@ async function fetchEvents(url) {
     }));
 
     return events;
+}
+
+//Use this function to see when the server was last update
+async function getLastModified(filePath) {
+    const response = await fetch(filePath, { method: 'HEAD' });
+    const lastModified = response.headers.get('Last-Modified');
+    if (lastModified) 
+        return new Date(lastModified);
+    return null;
 }

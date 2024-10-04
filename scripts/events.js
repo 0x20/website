@@ -1,4 +1,4 @@
-import { fetchEvents } from "./modules/ics-loader.js";
+import { fetchEvents, getLastModified } from "./modules/ics-loader.js";
 
 const icsEndpoint  = '/calendar.ics';
 
@@ -30,4 +30,13 @@ function addEvents(target, events) {
     });
 }
 
+async function setLastUpdatedTimestamp(icsEndpoint){
+    const timeStamp = await getLastModified(icsEndpoint);
+    const coloredDiv = document.getElementById("calenderLastUpdated");
+    let [day, hour] = timeStamp.toISOString().split('T');
+    hour = hour.split('.')[0];
+    coloredDiv.innerHTML = `${day}, ${hour}`;
+}
+
 processEvents(icsEndpoint);
+setLastUpdatedTimestamp(icsEndpoint);
