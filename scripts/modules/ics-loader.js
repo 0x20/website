@@ -30,9 +30,7 @@ async function fetchEvents(filePath) {
 
 //Use this function to see when the server was last update
 async function getLastModified(filePath) {
-    console.log("Updating last modified text in events");
     const response = await fetch(filePath);
-    console.log(response);
     const lastModified = response.headers.get('Last-Modified');
     if (lastModified) 
         return new Date(lastModified);
