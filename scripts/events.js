@@ -5,11 +5,27 @@ const icsEndpoint = '/calendar.ics';
 // Adds events to homepage
 async function processEvents(url) {
     const events = await fetchEvents(url);
-    // Sort by start date
-    const closestPastEvents = events.sort((a, b) => new Date(b.start) - new Date(a.start));
+    
+    const now = new Date();
+    var { futureEvents, pastEvents } = events.reduce((acc, event) => {
+        if (event.start) {
+            const eventDate = new Date(event.start);
+            if (eventDate > now) 
+                acc.futureEvents.push(event);
+            else if (eventDate < now) 
+                acc.pastEvents.push(event);
+        }
+        return acc;
+    }, { futureEvents: [], pastEvents: [] });
+
+    // Process future events
+    futureEvents = futureEvents.sort((a, b) => new Date(a.start) - new Date(b.start));
+    // Process past events
+    pastEvents = pastEvents.sort((a, b) => new Date(b.start) - new Date(a.start));
+     
     // Add events to HTML
-    const upcomingEventsList = document.getElementById('upcomingEvents');
-    addEvents(upcomingEventsList, closestPastEvents);
+    addFutureEvents(document.getElementById('upcomingEvents'), futureEvents);
+    addPastEvents(document.getElementById('pastEvents'), pastEvents);
 }
 
 // Function to extract image URLs from the description
@@ -18,7 +34,7 @@ function extractImageUrls(description) {
     return description.match(imageRegex) || [];
 }
 
-function addEvents(target, events) {
+function addPastEvents(target, events) {
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
@@ -30,7 +46,7 @@ function addEvents(target, events) {
 
         if (images.length > 0) {
             images.forEach(url => {
-                imagesHTML += `<img src="${url}" alt="Event Image" style="width:200px; margin:10px;">`;
+                imagesHTML += `<img src="${url}" alt="Event Image" style="height:250px; margin:10px;">`;
             });
         }
 
@@ -42,6 +58,26 @@ function addEvents(target, events) {
             <div>
                 <p>${event.description}</p>
                 <div>${imagesHTML}</div> <!-- Add the images here -->
+            </div>
+        </div>`;
+
+        target.innerHTML += eventHTML;
+    });
+}
+
+function addFutureEvents(target, events) {
+    target.innerHTML = ""; // Clear existing content
+    events.forEach(event => {
+        const eventDate = new Date(event.start);
+        const eventStr = getLocalIsoString(eventDate).split('T')[0];
+
+        const eventHTML = `
+        <div class="framed m-2 tile" style="min-width: 400px;height: 300px;">
+            <div class="mb-3">
+                <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
+            </div>
+            <div>
+                <p>${event.description}</p>
             </div>
         </div>`;
 
