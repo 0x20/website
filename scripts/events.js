@@ -20,8 +20,10 @@ async function processEvents(url) {
 
     // Process future events
     futureEvents = futureEvents.sort((a, b) => new Date(a.start) - new Date(b.start));
+    console.log("Amount of future events: " + futureEvents.length);
     // Process past events
     pastEvents = pastEvents.sort((a, b) => new Date(b.start) - new Date(a.start));
+    console.log("Amount of past events: " + pastEvents.length);
      
     // Add events to HTML
     addFutureEvents(document.getElementById('upcomingEvents'), futureEvents);
@@ -35,6 +37,7 @@ function extractImageUrls(description) {
 }
 
 function addPastEvents(target, events) {
+    console.log("Adding past events to " + target.id);
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
@@ -44,7 +47,7 @@ function addPastEvents(target, events) {
         const images = extractImageUrls(event.description);
         let imagesHTML = '';
 
-        if (images.length > 0) {
+        if (images.length > 0) {    
             images.forEach(url => {
                 imagesHTML += `<img src="${url}" alt="Event Image" style="height:250px; margin:10px;">`;
             });
@@ -66,6 +69,7 @@ function addPastEvents(target, events) {
 }
 
 function addFutureEvents(target, events) {
+    console.log("Adding future events to " + target.id);
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
