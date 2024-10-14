@@ -20,10 +20,8 @@ async function processEvents(url) {
 
     // Process future events
     futureEvents = futureEvents.sort((a, b) => new Date(a.start) - new Date(b.start));
-    console.log("Amount of future events: " + futureEvents.length);
     // Process past events
     pastEvents = pastEvents.sort((a, b) => new Date(b.start) - new Date(a.start));
-    console.log("Amount of past events: " + pastEvents.length);
      
     // Add events to HTML
     addFutureEvents(document.getElementById('upcomingEvents'), futureEvents);
@@ -37,7 +35,6 @@ function extractImageUrls(description) {
 }
 
 function addPastEvents(target, events) {
-    console.log("Adding past events to " + target.id);
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
@@ -69,14 +66,13 @@ function addPastEvents(target, events) {
 }
 
 function addFutureEvents(target, events) {
-    console.log("Adding future events to " + target.id);
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
         const eventStr = getLocalIsoString(eventDate).split('T')[0];
 
         const eventHTML = `
-        <div class="framed m-2 tile" style="min-width: 400px;height: 300px;">
+        <div class="framed m-2 tile" style="min-width: 400px;">
             <div class="mb-3">
                 <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
             </div>
