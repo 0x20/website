@@ -21,7 +21,7 @@ async function fetchEvents(filePath) {
         summary: event.getFirstPropertyValue('summary'),
         start: event.getFirstPropertyValue('dtstart'),
         end: event.getFirstPropertyValue('dtend'),
-        uid: event.getFirstPropertyValue('uid'),
+        uid: event.getFirstPropertyValue('uid').split('@')[0],
         description: event.getFirstPropertyValue('description'),
     }));
 

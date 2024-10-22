@@ -1,5 +1,4 @@
 import { fetchEvents, getLastModified, getLocalIsoString } from "./modules/ics-loader.js";
-
 const icsEndpoint = '/calendar.ics';
 
 // Adds events to homepage
@@ -49,11 +48,10 @@ function addPastEvents(target, events) {
                 imagesHTML += `<img src="${url}" alt="Event Image" style="height:250px; margin:10px;">`;
             });
         }
-
         const eventHTML = `
-        <div class="framed mb-5">
+        <div id=${event.uid} class="framed mb-5">
             <div class="mb-3">
-                <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
+                <colored>${eventStr}</colored> - ${event.summary}
             </div>
             <div>
                 <p>${event.description}</p>
@@ -72,9 +70,9 @@ function addFutureEvents(target, events) {
         const eventStr = getLocalIsoString(eventDate).split('T')[0];
 
         const eventHTML = `
-        <div class="framed m-2 tile" style="min-width: 400px;">
+        <div id=${event.uid} class="framed m-2 tile" style="min-width: 400px;">
             <div class="mb-3">
-                <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
+                <colored>${eventStr}</colored> - ${event.summary}
             </div>
             <div>
                 <p>${event.description}</p>
@@ -93,5 +91,25 @@ async function setLastUpdatedTimestamp(icsEndpoint) {
     coloredDiv.innerHTML = `${day}, ${hour}`;
 }
 
-processEvents(icsEndpoint);
-setLastUpdatedTimestamp(icsEndpoint);
+function scrollToAnchor() {
+    const hash = window.location.hash;
+    if (hash) {
+        const targetElementId = hash.substring(1); // Remove the '#' from the hash
+        const targetElement = document.getElementById(targetElementId);
+        console.log(`Trying to scroll to ${hash}`);             
+        if (targetElement) {
+            console.log(`Scrolling to ${hash}`);             
+            const yPosition = targetElement.getBoundingClientRect().top + window.scrollY - 200; 
+            // Compensate for  sticky header height
+            window.scrollTo({ top: yPosition, behavior: "smooth" });
+        }
+    }
+}
+
+async function initialize(){
+    await processEvents(icsEndpoint);
+    await setLastUpdatedTimestamp(icsEndpoint);
+    scrollToAnchor();
+}
+
+initialize();
