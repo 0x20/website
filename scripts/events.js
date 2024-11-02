@@ -67,8 +67,7 @@ function addFutureEvents(target, events) {
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
-        const eventStr = getLocalIsoString(eventDate).split('T')[0];
-
+        const eventStr = convertDateToStr(eventDate);
         const eventHTML = `
         <div id=${event.uid} class="framed m-2 tile" style="min-width: 400px;">
             <div class="mb-3">
@@ -81,6 +80,10 @@ function addFutureEvents(target, events) {
 
         target.innerHTML += eventHTML;
     });
+}
+
+function convertDateToStr(eventDate){
+    return `${eventDate.getFullYear()}-${String(eventDate.getMonth() + 1).padStart(2, '0')}-${String(eventDate.getDate()).padStart(2, '0')} ${String(eventDate.getHours()).padStart(2, '0')}h${String(eventDate.getMinutes()).padStart(2, '0')}m`;
 }
 
 async function setLastUpdatedTimestamp(icsEndpoint) {
