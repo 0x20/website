@@ -56,7 +56,7 @@ function addPastEvents(target, events) {
                 <colored>${eventStr}</colored> - ${event.summary}
             </div>
             <div>
-                <p>${event.description}</p>
+                <p>${event.description  ?? "No description available."}</p>
                 <div>${imagesHTML}</div> <!-- Add the images here -->
             </div>
         </div>`;
