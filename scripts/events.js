@@ -29,6 +29,8 @@ async function processEvents(url) {
 
 // Function to extract image URLs from the description
 function extractImageUrls(description) {
+    if(description == null)
+        return [];
     const imageRegex = /(https:\/\/[^\s]+?\.(?:jpg|jpeg|png|gif))/gi;
     return description.match(imageRegex) || [];
 }
