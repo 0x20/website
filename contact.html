@@ -14,6 +14,7 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <script type="module" src="scripts/script.js"></script>
+    <script defer src="scripts/contact.js"></script>
 </head>
 
 <body>
@@ -23,8 +24,6 @@
                 <div data-active="Contact" id="navbar" class="col-5 align-items-center justify-content-start nav">
                     <!-- Will fill automatically -->
                 </div>
-
-
                 <div class="col-2 align-items-center justify-content-center nav"><img src="i/0x20i.png" alt="logo hackerspace"></div>
                 <div class="col-5 align-items-center justify-content-end nav">
                     <a href="https://pad.hackerspace.gent/">Pad</a>
@@ -47,11 +46,16 @@
                         <br>
                         We're located at the <colored>Stadsmakers, Wiedauwkaai 51</colored>. 
                         Enter through the gate and follow the road to the parking. Take the stairs on your left to enter the building. 
-                        The space is opposite the main entrance behind the glass door.
+                        The space is opposite the main entrance behind the glass door. Usually people start arriving at 21h00m. 
                         <br><br>
-                        If the gate is closed you can ring the space by pressing the button below (WIP):
-                    </div>                   
-                    <button type="button" class="btn mt-3" onclick="window.location.href='https://www.youtube.com/watch?v=xvFZjo5PgG0';">Press to ring bell</button>
+                        Live tracker: <colored id="status">loading...</colored>
+                    </div>                                      
+                    <div class="not-framed mb-2">
+                        <h1>Ring the bell</h1>
+                        If the gate is closed you can ring the space by pressing the button below (WIP): 
+                        <button type="button" class="btn mt-3" onclick="window.location.href='https://www.youtube.com/watch?v=xvFZjo5PgG0';">Press to ring bell</button>
+                    </div>                                      
+                    
 
                     <div class="not-framed">
                         <h1>Contact information</h1>
