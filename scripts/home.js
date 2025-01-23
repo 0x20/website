@@ -41,7 +41,8 @@ function addEvents(target, events) {
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
-        const eventHTML = `<colored>${getLocalIsoString(eventDate).split('T')[0]}</colored> - <a href="#">${event.summary}</a><br>`;
+        const eventHTML = `<colored>${getLocalIsoString(eventDate).split('T')[0]}</colored> - <a href="./events.html#${event.uid}">${event.summary}</a>
+<br>`;
         target.innerHTML += eventHTML;
     });
 }

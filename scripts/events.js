@@ -1,5 +1,4 @@
 import { fetchEvents, getLastModified, getLocalIsoString } from "./modules/ics-loader.js";
-
 const icsEndpoint = '/calendar.ics';
 
 // Adds events to homepage
@@ -30,6 +29,8 @@ async function processEvents(url) {
 
 // Function to extract image URLs from the description
 function extractImageUrls(description) {
+    if(description == null)
+        return [];
     const imageRegex = /(https:\/\/[^\s]+?\.(?:jpg|jpeg|png|gif))/gi;
     return description.match(imageRegex) || [];
 }
@@ -49,14 +50,13 @@ function addPastEvents(target, events) {
                 imagesHTML += `<img src="${url}" alt="Event Image" style="height:250px; margin:10px;">`;
             });
         }
-
         const eventHTML = `
-        <div class="framed mb-5">
+        <div id=${event.uid} class="framed mb-5">
             <div class="mb-3">
-                <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
+                <colored>${eventStr}</colored> - ${event.summary}
             </div>
             <div>
-                <p>${event.description}</p>
+                <p>${event.description  ?? "No description available."}</p>
                 <div>${imagesHTML}</div> <!-- Add the images here -->
             </div>
         </div>`;
@@ -69,12 +69,11 @@ function addFutureEvents(target, events) {
     target.innerHTML = ""; // Clear existing content
     events.forEach(event => {
         const eventDate = new Date(event.start);
-        const eventStr = getLocalIsoString(eventDate).split('T')[0];
-
+        const eventStr = convertDateToStr(eventDate);
         const eventHTML = `
-        <div class="framed m-2 tile" style="min-width: 400px;">
+        <div id=${event.uid} class="framed m-2 tile" style="min-width: 400px;">
             <div class="mb-3">
-                <colored>${eventStr}</colored> - <a href="#">${event.summary}</a>
+                <colored>${eventStr}</colored> - ${event.summary}
             </div>
             <div>
                 <p>${event.description}</p>
@@ -85,6 +84,10 @@ function addFutureEvents(target, events) {
     });
 }
 
+function convertDateToStr(eventDate){
+    return `${eventDate.getFullYear()}-${String(eventDate.getMonth() + 1).padStart(2, '0')}-${String(eventDate.getDate()).padStart(2, '0')} ${String(eventDate.getHours()).padStart(2, '0')}h${String(eventDate.getMinutes()).padStart(2, '0')}m`;
+}
+
 async function setLastUpdatedTimestamp(icsEndpoint) {
     const timeStamp = await getLastModified(icsEndpoint);
     const coloredDiv = document.getElementById("calenderLastUpdated");
@@ -93,5 +96,25 @@ async function setLastUpdatedTimestamp(icsEndpoint) {
     coloredDiv.innerHTML = `${day}, ${hour}`;
 }
 
-processEvents(icsEndpoint);
-setLastUpdatedTimestamp(icsEndpoint);
+function scrollToAnchor() {
+    const hash = window.location.hash;
+    if (hash) {
+        const targetElementId = hash.substring(1); // Remove the '#' from the hash
+        const targetElement = document.getElementById(targetElementId);
+        console.log(`Trying to scroll to ${hash}`);             
+        if (targetElement) {
+            console.log(`Scrolling to ${hash}`);             
+            const yPosition = targetElement.getBoundingClientRect().top + window.scrollY - 200; 
+            // Compensate for  sticky header height
+            window.scrollTo({ top: yPosition, behavior: "smooth" });
+        }
+    }
+}
+
+async function initialize(){
+    await processEvents(icsEndpoint);
+    await setLastUpdatedTimestamp(icsEndpoint);
+    scrollToAnchor();
+}
+
+initialize();
