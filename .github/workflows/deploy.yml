@@ -1,0 +1,19 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches: [ main ]  # change if you want a different branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run update.sh on Azure server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: 74.178.90.56
+          username: root
+          key: ${{ secrets.AZURE_SSH_KEY }}
+          script: |
+            cd ~/apps/newline/container/src
+            ./update.sh
