@@ -6,6 +6,21 @@
   --accent: #FFA86A;
 }
 
+/* Custom scrollbar styling */
+::-webkit-scrollbar-track {
+  background: var(--body-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFB87A;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--body-bg);
+}
+
 body {
   --bs-body-font-family: var(--bs-font-monospace);
   --bs-body-line-height: 1.4;
@@ -149,4 +164,43 @@ a.active {
 
 .btn:hover {
     background-color: rgba(250, 168, 106, 0.2); /* Light orange background on hover */
+}
+
+/* Space Open Banner */
+.space-open-banner {
+    width: 100%;
+    background-color: transparent;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+    overflow: hidden;
+    padding: 15px 0;
+    font-family: var(--bs-font-monospace);
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.space-open-banner.hidden {
+    display: none;
+}
+
+.banner-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-banner 30s linear infinite;
+    color: #FF7020;
+}
+
+.banner-text {
+    display: inline-block;
+}
+
+@keyframes scroll-banner {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }

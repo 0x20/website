@@ -2,6 +2,45 @@ import { fetchEvents, getLocalIsoString } from "./modules/ics-loader.js";
 
 const icsEndpoint  = '/calendar.ics';
 
+// Space status banner functionality
+async function updateSpaceStatusBanner() {
+    const banner = document.getElementById('space-open-banner');
+
+    try {
+        const response = await fetch('https://windowserver.0x20.be/spaceapi.json');
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+
+        // Check the state of the space
+        if (data.state && typeof data.state.open === 'boolean') {
+            if (data.state.open) {
+                // Show the banner
+                banner.classList.remove('hidden');
+            } else {
+                // Hide the banner
+                banner.classList.add('hidden');
+            }
+        } else {
+            // Hide banner if tracker is down
+            banner.classList.add('hidden');
+        }
+    } catch (error) {
+        console.error('Error fetching the space status:', error);
+        // Hide banner on error
+        banner.classList.add('hidden');
+    }
+}
+
+// Poll the endpoint every 30 seconds
+setInterval(updateSpaceStatusBanner, 30000);
+
+// Initial update
+updateSpaceStatusBanner();
+
 //Adds events to homepage
 async function processEvents(url){
     const events = await fetchEvents(url);
