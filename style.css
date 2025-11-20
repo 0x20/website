@@ -170,8 +170,8 @@ a.active {
 .space-open-banner {
     width: 100%;
     background-color: transparent;
-    border-top: 1px solid var(--accent);
-    border-bottom: 1px solid var(--accent);
+    border-top: 1px solid #7FD87F;
+    border-bottom: 1px solid #7FD87F;
     overflow: hidden;
     padding: 15px 0;
     font-family: var(--bs-font-monospace);
@@ -189,7 +189,7 @@ a.active {
     display: inline-block;
     white-space: nowrap;
     animation: scroll-banner 30s linear infinite;
-    color: #FF7020;
+    color: #7FD87F;
 }
 
 .banner-text {
