@@ -24,58 +24,82 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART:20260108T210000Z
-DTEND:20260108T230000Z
-DTSTAMP:20260222T041327Z
-UID:q4uurhn43tdtu15b37ms0nhak0@google.com
-CREATED:20260113T231306Z
-DESCRIPTION:Join us every Thursday at 21:00 for our weekly social!\n\nOpen 
- to everyone - members and visitors welcome. Come hang out\, work on project
- s\, or just chat.
-LAST-MODIFIED:20260113T231306Z
+DTSTART:20241024T183000Z
+DTEND:20241024T203000Z
+DTSTAMP:20260222T054833Z
+UID:2g1mcc5kiog33ga0lnvbro6dos@google.com
+CREATED:20241004T150242Z
+DESCRIPTION:<ul><li>Discussing the proposed new changes to the blueprint.</
+ li><li>Opportunity to provide feedback. </li></ul>
+LAST-MODIFIED:20241010T222957Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Weekly Social
+SUMMARY:New Blueprint Reveal 
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260529
-DTEND;VALUE=DATE:20260601
-DTSTAMP:20260222T041327Z
-UID:12jr42g5hpl3n5mb5a88ppntnt@google.com
-CREATED:20251121T003625Z
-DESCRIPTION:A show and tell for hackers\, makers and tinkerers of all shape
- s and kinds. <br><br>NewLine is back for its 2026 edition! Join us for thre
- e days of creativity\, technology and community at Hackerspace Gent.<br><br
- ><a href="https://newline.gent/">https://newline.gent/</a>
-LAST-MODIFIED:20251121T003626Z
-SEQUENCE:0
+DTSTART:20241121T190000Z
+DTEND:20241121T220000Z
+DTSTAMP:20260222T054833Z
+UID:5qm0nlu3p9qeahgm60ojnmnte3@google.com
+CREATED:20241216T225833Z
+LAST-MODIFIED:20241216T225905Z
+SEQUENCE:1
 STATUS:CONFIRMED
-SUMMARY:Newline 2026 
+SUMMARY:Weekly Social #8
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20241031T180000Z
-DTEND:20241031T230000Z
-DTSTAMP:20260222T041327Z
-UID:0i22u1ruhhe7jbpecic3v0hqtc@google.com
-CREATED:20241019T214552Z
-DESCRIPTION:Experimenting with a LEGO Dacta control pane from the 90's. <br
- >Running the CNC machine for the first time to plane some stock (badly). <b
- r><br>Images: <br><a href="https://storage.googleapis.com/hackerspace-websi
- te/%20LEGO%20Dacta%20control%20pane.jpg">LEGO Dacta control pane</a><br><a 
- href="https://storage.googleapis.com/hackerspace-website/CNC%20Planing.jpg"
-  target="_blank">CNC Planing</a>
-LAST-MODIFIED:20241102T162402Z
+DTSTART:20241116T090000Z
+DTEND:20241116T100000Z
+DTSTAMP:20260222T054833Z
+UID:3dpbqv3mdaeent24u86nai0blk@google.com
+CREATED:20241002T220819Z
+DESCRIPTION:Opportunity to try out the presentations we will give for Newli
+ ne and get feedback from members and non members. <br><br>Speakers<br><ul><
+ li>Johan: Home automation</li><li>Mateo: Stacking for astrophotography with
+  Python</li><li>Mike: Point your telescope in the right direction with a Pi
+ Finder™</li></ul>
+LAST-MODIFIED:20241117T214445Z
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Talk rehearsal for Newline
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260219T190000Z
+DTEND:20260219T200000Z
+DTSTAMP:20260222T054833Z
+UID:iki3q07nafebc1iakmtbe1mb98@google.com
+CREATED:20260222T000754Z
+DESCRIPTION:Teus presents his 3D-printed mushroom light and walks us throug
+ h the design decisions behind it.\n\nWe’ll reverse engineer the build from 
+ the outside in: enclosure design\, USB-C power\, ESP32 + WLED setup\, and t
+ he trade-offs between aesthetics and practical constraints.\n\n![Teus mushr
+ oom](https://storage.googleapis.com/hackerspace-website/tijs-shroom.jpg)
+LAST-MODIFIED:20260222T000754Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Weekly Social #5
+SUMMARY:Mushroom design reverse engineering
 TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20241003T170000Z
+DTEND:20241003T173000Z
+DTSTAMP:20260222T054833Z
+UID:62kea80pk7qkhojlp0124a3lvf@google.com
+CREATED:20241004T144318Z
+DESCRIPTION:Working on the CNC router
+LAST-MODIFIED:20241004T204938Z
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Weekly Social #1
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20250130T200000Z
 DTEND:20250130T230000Z
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:1hp2bmh9i1tpc0hrgkigrg2rnr@google.com
 CREATED:20250201T004409Z
 DESCRIPTION:We go together and tried fixing an older broken Ender 6 machine
@@ -92,7 +116,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20250313
 DTEND;VALUE=DATE:20250314
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:5vc9hfbpfe93tjgdeahlkpq6lk@google.com
 CREATED:20250315T023644Z
 DESCRIPTION:Now that the CNC machine is operational we are pivoting to gett
@@ -107,88 +131,107 @@ SUMMARY:Weekly Social
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20241107T193000Z
-DTEND:20241107T200000Z
-DTSTAMP:20260222T041327Z
-UID:4lmhcvu6ljtqbn5k5h3np0f3bc@google.com
-CREATED:20241102T002254Z
-DESCRIPTION:Juicing the CNC machine. No more microstepping\, and no more cu
- rrent limiting. The goal is to machine a CNC Benchy equivalent.
-LAST-MODIFIED:20241102T183516Z
-SEQUENCE:1
+DTSTART;VALUE=DATE:20241212
+DTEND;VALUE=DATE:20241213
+DTSTAMP:20260222T054833Z
+UID:6nprmuh8us26rc8bjeo5t07blm@google.com
+CREATED:20241216T230117Z
+DESCRIPTION:We worked  on the CNC machine endstops. We created a 3d printed
+  part to finely position of the magnet for the limit switches. <br><a href=
+ "https://storage.googleapis.com/hackerspace-website/endstop-mechanism.jpg">
+ endstop adjustment part</a>
+LAST-MODIFIED:20241221T022541Z
+SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Weekly social #6
+SUMMARY:Weekly social #11
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20240926T170000Z
-DTEND:20240926T180000Z
-DTSTAMP:20260222T041327Z
-UID:35t8sobnme5r7320e1h8bellhd@google.com
-CREATED:20241004T144225Z
-DESCRIPTION:Created the website
-LAST-MODIFIED:20241004T204936Z
+DTSTART;VALUE=DATE:20260529
+DTEND;VALUE=DATE:20260601
+DTSTAMP:20260222T054833Z
+UID:12jr42g5hpl3n5mb5a88ppntnt@google.com
+CREATED:20251121T003625Z
+DESCRIPTION:A show and tell for hackers\, makers and tinkerers of all shape
+ s and kinds. <br><br>NewLine is back for its 2026 edition! Join us for thre
+ e days of creativity\, technology and community at Hackerspace Gent.<br><br
+ ><a href="https://newline.gent/">https://newline.gent/</a>
+LAST-MODIFIED:20251121T003626Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Newline 2026 
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20241114
+DTEND;VALUE=DATE:20241115
+DTSTAMP:20260222T054833Z
+UID:0ijp0lor8qufo1abnv4227lncm@google.com
+CREATED:20241117T214335Z
+LAST-MODIFIED:20241117T214335Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Weekly social #7
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20241128T200000Z
+DTEND:20241128T203000Z
+DTSTAMP:20260222T054833Z
+UID:3uqursfpscgn3bje7t9dhsnrc5@google.com
+CREATED:20241128T130426Z
+DESCRIPTION:To make sure everyone can share ideas and contribute\, we’re of
+ ficially going to kickstart this Thursday. <br><ul><li>Pad: <a href="https:
+ //pad.hackerspace.gent/newline2025">https://pad.hackerspace.gent/newline202
+ 5</a> </li><li>Newline channel: <a href="https://chat.hackerspace.gent/hack
+ erspacegent/channels/newline.">https://chat.hackerspace.gent/hackerspacegen
+ t/channels/newline.</a> </li></ul><br>If you can't join and want to contrib
+ ute one way or another\, join the channel and share your thoughts\, add you
+ r name to the pad where you feel like you can contribute\, share ... it's O
+ K to have more than one name next to each item! Hope you can join!
+LAST-MODIFIED:20241128T133155Z
 SEQUENCE:1
 STATUS:CONFIRMED
-SUMMARY:Weekly social #0
+SUMMARY:Newline 2025 Planning
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20241212T180000Z
-DTEND:20241212T230000Z
-DTSTAMP:20260222T041327Z
-UID:21bl588r7276ee71j705igvged@google.com
-CREATED:20241210T070438Z
-DESCRIPTION:The chosen movie was <span>"</span><span>Sneakers </span><span>
- (1992)</span><span>" after "The Room" was banned by a controversial executi
- ve board decision. </span>
-LAST-MODIFIED:20241221T021949Z
+DTSTART:20241217T180000Z
+DTEND:20241217T220000Z
+DTSTAMP:20260222T054833Z
+UID:74n0jkgovb96jjg9i91ja2ivn2@google.com
+CREATED:20241210T070523Z
+LAST-MODIFIED:20241210T070523Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Cleaning night + movie night
+SUMMARY:Lock picking (open to everyone)
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20240924T160000Z
-DTEND:20240924T200000Z
-DTSTAMP:20260222T041327Z
-UID:6oe7n0vgmq6slc91lbna2ljonq@google.com
-CREATED:20241001T203527Z
-DESCRIPTION:Lockpicking evening hosted by Birger.
-LAST-MODIFIED:20241001T222232Z
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Lockpicking evening
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20241205
-DTEND;VALUE=DATE:20241206
-DTSTAMP:20260222T041327Z
-UID:4jmvcd8intom02p60h6ff2eeb4@google.com
-CREATED:20241216T230004Z
-LAST-MODIFIED:20241216T230004Z
+DTSTART:20260814T000000Z
+DTEND:20260816T000000Z
+DTSTAMP:20260222T054833Z
+UID:4f3rvf66gp4i3afohnmu1u6cck@google.com
+CREATED:20260222T000758Z
+DESCRIPTION:# Fri3d Camp 2026\n\nThis event is at an external location but 
+ probably a bunch of Hackerspace Gent people will participate.\n\nFrom 14 Au
+ gust till 16 August 2026 in De Kluis in St-Joris-Weert\, Belgium.\n\n- deta
+ ils at https://fri3d.be \n- tickets at https://tickets.fri3d.be/\n\n## Hack
+ erspace gent village\n\nIf we are with enough people we could go for a hack
+ erspace.gent village at Fri3d Camp.\n\n| Who                  | Arriving da
+ te    | Retun date |\n| :------------------- | :--------------: | :--------
+ - |\n| Gust + Hala + L + R  | 14 Aug           | 16 Aug     |\n| Add here  
+            | ?? Aug           | ?? Aug     |
+LAST-MODIFIED:20260222T000758Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Weekly social #10
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20251016T190000Z
-DTEND:20251016T200000Z
-DTSTAMP:20260222T041327Z
-UID:0ni7kipvnl4jm8jrjqnvr7fi58@google.com
-CREATED:20251014T224550Z
-LAST-MODIFIED:20251016T104042Z
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Newline meeting
+SUMMARY:Fri3d Camp 2026
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20260121T183000Z
 DTEND:20260121T225900Z
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:duj1ttpur1rp4sfj9jo0dvnc8c@google.com
 CREATED:20260113T105748Z
 DESCRIPTION:# Meshcore meetup\n\nInformele bijeenkomst voor alle mensen die
@@ -208,57 +251,22 @@ SUMMARY:Meshcore meeting
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20260814T000000Z
-DTEND:20260816T000000Z
-DTSTAMP:20260222T041327Z
-UID:4f3rvf66gp4i3afohnmu1u6cck@google.com
-CREATED:20260222T000758Z
-DESCRIPTION:# Fri3d Camp 2026\n\nThis event is at an external location but 
- probably a bunch of Hackerspace Gent people will participate.\n\nFrom 14 Au
- gust till 16 August 2026 in De Kluis in St-Joris-Weert\, Belgium.\n\n- deta
- ils at https://fri3d.be \n- tickets at https://tickets.fri3d.be/\n\n## Hack
- erspace gent village\n\nIf we are with enough people we could go for a hack
- erspace.gent village at Fri3d Camp.\n\n| Who                  | Arriving da
- te    | Retun date |\n| :------------------- | :--------------: | :--------
- - |\n| Gust + Hala + L + R  | 14 Aug           | 16 Aug     |\n| Add here  
-            | ?? Aug           | ?? Aug     |
-LAST-MODIFIED:20260222T000758Z
+DTSTART;VALUE=DATE:20241205
+DTEND;VALUE=DATE:20241206
+DTSTAMP:20260222T054833Z
+UID:4jmvcd8intom02p60h6ff2eeb4@google.com
+CREATED:20241216T230004Z
+LAST-MODIFIED:20241216T230004Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Fri3d Camp 2026
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20241003T170000Z
-DTEND:20241003T173000Z
-DTSTAMP:20260222T041327Z
-UID:62kea80pk7qkhojlp0124a3lvf@google.com
-CREATED:20241004T144318Z
-DESCRIPTION:Working on the CNC router
-LAST-MODIFIED:20241004T204938Z
-SEQUENCE:2
-STATUS:CONFIRMED
-SUMMARY:Weekly Social #1
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20241015T150000Z
-DTEND:20241015T180000Z
-DTSTAMP:20260222T041327Z
-UID:31g1si9khuqrijt47p0ki09r7f@google.com
-CREATED:20241007T110826Z
-DESCRIPTION:Lockpicking evening hosted by birger
-LAST-MODIFIED:20241007T111245Z
-SEQUENCE:2
-STATUS:CONFIRMED
-SUMMARY:Locksport Meeting
+SUMMARY:Weekly social #10
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=Europe/Brussels:20250529T210000
 DTEND;TZID=Europe/Brussels:20250529T235900
 RRULE:FREQ=WEEKLY;BYDAY=TH
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:1t42cj4pfs3ikm7jkjjojfsnog@google.com
 CREATED:20251218T121230Z
 DESCRIPTION:Join us every Thursday at 21:00 for our weekly social!\n\nOpen 
@@ -271,9 +279,24 @@ SUMMARY:Weekly social
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;VALUE=DATE:20250523
+DTEND;VALUE=DATE:20250526
+DTSTAMP:20260222T054833Z
+UID:2tkbtqk3db28r2bqfbfls4g67u@google.com
+CREATED:20241001T221740Z
+DESCRIPTION:<span>Check out the  </span><a href="https://newline.gent/"><u>
+ official website</u></a><span>!</span>
+LAST-MODIFIED:20250315T032555Z
+LOCATION:Widauwkaai 51\, Ghent\, Belgium
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Newline 2025
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;VALUE=DATE:20241219
 DTEND;VALUE=DATE:20241220
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:0i0m4tgcvmsd6lk6vi35nv2tvd@google.com
 CREATED:20241213T115846Z
 DESCRIPTION:Bloemist showed us the next iteration of the Newline poster. <b
@@ -287,59 +310,26 @@ SUMMARY:Weekly social #12
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20241217T180000Z
-DTEND:20241217T220000Z
-DTSTAMP:20260222T041327Z
-UID:74n0jkgovb96jjg9i91ja2ivn2@google.com
-CREATED:20241210T070523Z
-LAST-MODIFIED:20241210T070523Z
+DTSTART;VALUE=DATE:20241017
+DTEND;VALUE=DATE:20241018
+DTSTAMP:20260222T054833Z
+UID:1auk889mc9j6ptfp1dlebj4au4@google.com
+CREATED:20241011T114338Z
+DESCRIPTION:<br>Working on the CNC machine. Configuring endstops. Designing
+  enclosure for the TinyBee V1.<br><br>Images: <br><a href="https://storage.
+ googleapis.com/hackerspace-website/frame%20no%20fan.jpg">frame no fan</a><b
+ r><a href="https://storage.googleapis.com/hackerspace-website/frame.jpg">fr
+ ame render</a>
+LAST-MODIFIED:20241019T212101Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Lock picking (open to everyone)
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20241114
-DTEND;VALUE=DATE:20241115
-DTSTAMP:20260222T041327Z
-UID:0ijp0lor8qufo1abnv4227lncm@google.com
-CREATED:20241117T214335Z
-LAST-MODIFIED:20241117T214335Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Weekly social #7
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20241024T183000Z
-DTEND:20241024T203000Z
-DTSTAMP:20260222T041327Z
-UID:2g1mcc5kiog33ga0lnvbro6dos@google.com
-CREATED:20241004T150242Z
-DESCRIPTION:<ul><li>Discussing the proposed new changes to the blueprint.</
- li><li>Opportunity to provide feedback. </li></ul>
-LAST-MODIFIED:20241010T222957Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:New Blueprint Reveal 
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20241121T190000Z
-DTEND:20241121T220000Z
-DTSTAMP:20260222T041327Z
-UID:5qm0nlu3p9qeahgm60ojnmnte3@google.com
-CREATED:20241216T225833Z
-LAST-MODIFIED:20241216T225905Z
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Weekly Social #8
+SUMMARY:Weekly Social #3
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20250306T210000Z
 DTEND:20250306T230000Z
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:29g5p2slrqmbfekrsmvbtg0qso@google.com
 CREATED:20250315T023120Z
 DESCRIPTION:Johan donated one panel of his giant LED project to the space. 
@@ -353,42 +343,131 @@ SUMMARY:Weekly Social
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20250523
-DTEND;VALUE=DATE:20250526
-DTSTAMP:20260222T041327Z
-UID:2tkbtqk3db28r2bqfbfls4g67u@google.com
-CREATED:20241001T221740Z
-DESCRIPTION:<span>Check out the  </span><a href="https://newline.gent/"><u>
- official website</u></a><span>!</span>
-LAST-MODIFIED:20250315T032555Z
-LOCATION:Widauwkaai 51\, Ghent\, Belgium
+DTSTART:20251230T180000Z
+DTEND:20251230T230000Z
+DTSTAMP:20260222T054833Z
+UID:49tu4mccrhtph2jmap4fn2eqp0@google.com
+CREATED:20260103T221551Z
+DESCRIPTION:Since the next two thursdays have bad timing we will hold a pse
+ udo social on tuesday to fulfill our need for spending claude code tokens t
+ ogether. Happy holidays! 🎅🎄🎁🎆
+LAST-MODIFIED:20260103T221551Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pseudo social
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240926T170000Z
+DTEND:20240926T180000Z
+DTSTAMP:20260222T054833Z
+UID:35t8sobnme5r7320e1h8bellhd@google.com
+CREATED:20241004T144225Z
+DESCRIPTION:Created the website
+LAST-MODIFIED:20241004T204936Z
 SEQUENCE:1
 STATUS:CONFIRMED
-SUMMARY:Newline 2025
+SUMMARY:Weekly social #0
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20241015T150000Z
+DTEND:20241015T180000Z
+DTSTAMP:20260222T054833Z
+UID:31g1si9khuqrijt47p0ki09r7f@google.com
+CREATED:20241007T110826Z
+DESCRIPTION:Lockpicking evening hosted by birger
+LAST-MODIFIED:20241007T111245Z
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Locksport Meeting
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20260115T200000Z
-DTEND:20260115T210000Z
-DTSTAMP:20260222T041327Z
-UID:4epdc24dps7k7oef4hr3p00t5g@google.com
-CREATED:20260113T125729Z
-DESCRIPTION:### Planning the LAN party\nWe need a few brave souls to help o
- rganize this ritual properly — games\, setup\, food\, chaos management.\nIf
-  you want in on the planning party\, ping @ari. 🧙‍♀️💻\nOr come to the soc
- ial next thursday 15 Januari At 8PM \n\n\n![Ari setting up the minecraft se
- rver](https://storage.googleapis.com/hackerspace-website/lan-party-planning
- -small.jpg)
-LAST-MODIFIED:20260222T000802Z
+DTSTART:20240924T160000Z
+DTEND:20240924T200000Z
+DTSTAMP:20260222T054833Z
+UID:6oe7n0vgmq6slc91lbna2ljonq@google.com
+CREATED:20241001T203527Z
+DESCRIPTION:Lockpicking evening hosted by Birger.
+LAST-MODIFIED:20241001T222232Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Lockpicking evening
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20251016T190000Z
+DTEND:20251016T200000Z
+DTSTAMP:20260222T054833Z
+UID:0ni7kipvnl4jm8jrjqnvr7fi58@google.com
+CREATED:20251014T224550Z
+LAST-MODIFIED:20251016T104042Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Newline meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260108T210000Z
+DTEND:20260108T230000Z
+DTSTAMP:20260222T054833Z
+UID:q4uurhn43tdtu15b37ms0nhak0@google.com
+CREATED:20260113T231306Z
+DESCRIPTION:Join us every Thursday at 21:00 for our weekly social!\n\nOpen 
+ to everyone - members and visitors welcome. Come hang out\, work on project
+ s\, or just chat.
+LAST-MODIFIED:20260113T231306Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:LAN party planning
+SUMMARY:Weekly Social
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20241107T193000Z
+DTEND:20241107T200000Z
+DTSTAMP:20260222T054833Z
+UID:4lmhcvu6ljtqbn5k5h3np0f3bc@google.com
+CREATED:20241102T002254Z
+DESCRIPTION:Juicing the CNC machine. No more microstepping\, and no more cu
+ rrent limiting. The goal is to machine a CNC Benchy equivalent.
+LAST-MODIFIED:20241102T183516Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Weekly social #6
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20241212T180000Z
+DTEND:20241212T230000Z
+DTSTAMP:20260222T054833Z
+UID:21bl588r7276ee71j705igvged@google.com
+CREATED:20241210T070438Z
+DESCRIPTION:The chosen movie was <span>"</span><span>Sneakers </span><span>
+ (1992)</span><span>" after "The Room" was banned by a controversial executi
+ ve board decision. </span>
+LAST-MODIFIED:20241221T021949Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cleaning night + movie night
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20241128T190000Z
+DTEND:20241128T220000Z
+DTSTAMP:20260222T054833Z
+UID:400jhb1gea4fatopovqrsojtn1@google.com
+CREATED:20241216T225942Z
+LAST-MODIFIED:20241216T225942Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Weekly social #9
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20241024T170000Z
 DTEND:20241024T220000Z
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:2lcb91iba9357t914ols3ig66q@google.com
 CREATED:20241019T214345Z
 DESCRIPTION:Moving the stepper motors for the CNC machine for the first tim
@@ -401,25 +480,27 @@ SUMMARY:Weekly Social #4
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20241212
-DTEND;VALUE=DATE:20241213
-DTSTAMP:20260222T041327Z
-UID:6nprmuh8us26rc8bjeo5t07blm@google.com
-CREATED:20241216T230117Z
-DESCRIPTION:We worked  on the CNC machine endstops. We created a 3d printed
-  part to finely position of the magnet for the limit switches. <br><a href=
- "https://storage.googleapis.com/hackerspace-website/endstop-mechanism.jpg">
- endstop adjustment part</a>
-LAST-MODIFIED:20241221T022541Z
+DTSTART:20241031T180000Z
+DTEND:20241031T230000Z
+DTSTAMP:20260222T054833Z
+UID:0i22u1ruhhe7jbpecic3v0hqtc@google.com
+CREATED:20241019T214552Z
+DESCRIPTION:Experimenting with a LEGO Dacta control pane from the 90's. <br
+ >Running the CNC machine for the first time to plane some stock (badly). <b
+ r><br>Images: <br><a href="https://storage.googleapis.com/hackerspace-websi
+ te/%20LEGO%20Dacta%20control%20pane.jpg">LEGO Dacta control pane</a><br><a 
+ href="https://storage.googleapis.com/hackerspace-website/CNC%20Planing.jpg"
+  target="_blank">CNC Planing</a>
+LAST-MODIFIED:20241102T162402Z
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Weekly social #11
-TRANSP:TRANSPARENT
+SUMMARY:Weekly Social #5
+TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 DTSTART:20241010T170000Z
 DTEND:20241010T210000Z
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:23gqvgal8lbdqo0qk2c1et8iql@google.com
 CREATED:20241007T111155Z
 DESCRIPTION:Meeting with the stadsmakers\, taking pictures of the northern 
@@ -435,79 +516,9 @@ SUMMARY:Weekly Social #2
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20241116T090000Z
-DTEND:20241116T100000Z
-DTSTAMP:20260222T041327Z
-UID:3dpbqv3mdaeent24u86nai0blk@google.com
-CREATED:20241002T220819Z
-DESCRIPTION:Opportunity to try out the presentations we will give for Newli
- ne and get feedback from members and non members. <br><br>Speakers<br><ul><
- li>Johan: Home automation</li><li>Mateo: Stacking for astrophotography with
-  Python</li><li>Mike: Point your telescope in the right direction with a Pi
- Finder™</li></ul>
-LAST-MODIFIED:20241117T214445Z
-SEQUENCE:3
-STATUS:CONFIRMED
-SUMMARY:Talk rehearsal for Newline
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20260219T190000Z
-DTEND:20260219T200000Z
-DTSTAMP:20260222T041327Z
-UID:iki3q07nafebc1iakmtbe1mb98@google.com
-CREATED:20260222T000754Z
-DESCRIPTION:Teus presents his 3D-printed mushroom light and walks us throug
- h the design decisions behind it.\n\nWe’ll reverse engineer the build from 
- the outside in: enclosure design\, USB-C power\, ESP32 + WLED setup\, and t
- he trade-offs between aesthetics and practical constraints.\n\n![Teus mushr
- oom](https://storage.googleapis.com/hackerspace-website/tijs-shroom.jpg)
-LAST-MODIFIED:20260222T000754Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Mushroom design reverse engineering
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20241128T200000Z
-DTEND:20241128T203000Z
-DTSTAMP:20260222T041327Z
-UID:3uqursfpscgn3bje7t9dhsnrc5@google.com
-CREATED:20241128T130426Z
-DESCRIPTION:To make sure everyone can share ideas and contribute\, we’re of
- ficially going to kickstart this Thursday. <br><ul><li>Pad: <a href="https:
- //pad.hackerspace.gent/newline2025">https://pad.hackerspace.gent/newline202
- 5</a> </li><li>Newline channel: <a href="https://chat.hackerspace.gent/hack
- erspacegent/channels/newline.">https://chat.hackerspace.gent/hackerspacegen
- t/channels/newline.</a> </li></ul><br>If you can't join and want to contrib
- ute one way or another\, join the channel and share your thoughts\, add you
- r name to the pad where you feel like you can contribute\, share ... it's O
- K to have more than one name next to each item! Hope you can join!
-LAST-MODIFIED:20241128T133155Z
-SEQUENCE:1
-STATUS:CONFIRMED
-SUMMARY:Newline 2025 Planning
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20251230T180000Z
-DTEND:20251230T230000Z
-DTSTAMP:20260222T041327Z
-UID:49tu4mccrhtph2jmap4fn2eqp0@google.com
-CREATED:20260103T221551Z
-DESCRIPTION:Since the next two thursdays have bad timing we will hold a pse
- udo social on tuesday to fulfill our need for spending claude code tokens t
- ogether. Happy holidays! 🎅🎄🎁🎆
-LAST-MODIFIED:20260103T221551Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Pseudo social
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20260207T110000Z
 DTEND:20260207T225900Z
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:10s5q965dpjpdkcfrfsad5ppm0@google.com
 CREATED:20260222T000750Z
 DESCRIPTION:![prizes and results](https://storage.googleapis.com/hackerspac
@@ -531,9 +542,27 @@ SUMMARY:LAN Party
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
+DTSTART:20260115T200000Z
+DTEND:20260115T210000Z
+DTSTAMP:20260222T054833Z
+UID:4epdc24dps7k7oef4hr3p00t5g@google.com
+CREATED:20260113T125729Z
+DESCRIPTION:### Planning the LAN party\nWe need a few brave souls to help o
+ rganize this ritual properly — games\, setup\, food\, chaos management.\nIf
+  you want in on the planning party\, ping @ari. 🧙‍♀️💻\nOr come to the soc
+ ial next thursday 15 Januari At 8PM \n\n\n![Ari setting up the minecraft se
+ rver](https://storage.googleapis.com/hackerspace-website/lan-party-planning
+ -small.jpg)
+LAST-MODIFIED:20260222T000802Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LAN party planning
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20250227T200000Z
 DTEND:20250227T203000Z
-DTSTAMP:20260222T041327Z
+DTSTAMP:20260222T054833Z
 UID:2jv7l1r8s8ru0m376h1trjq21j@google.com
 CREATED:20250218T164050Z
 DESCRIPTION:<p><span>The date is approaching\, and there’s still a lot to d
@@ -543,35 +572,6 @@ LAST-MODIFIED:20250218T164108Z
 SEQUENCE:1
 STATUS:CONFIRMED
 SUMMARY:Newline meeting
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20241017
-DTEND;VALUE=DATE:20241018
-DTSTAMP:20260222T041327Z
-UID:1auk889mc9j6ptfp1dlebj4au4@google.com
-CREATED:20241011T114338Z
-DESCRIPTION:<br>Working on the CNC machine. Configuring endstops. Designing
-  enclosure for the TinyBee V1.<br><br>Images: <br><a href="https://storage.
- googleapis.com/hackerspace-website/frame%20no%20fan.jpg">frame no fan</a><b
- r><a href="https://storage.googleapis.com/hackerspace-website/frame.jpg">fr
- ame render</a>
-LAST-MODIFIED:20241019T212101Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Weekly Social #3
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20241128T190000Z
-DTEND:20241128T220000Z
-DTSTAMP:20260222T041327Z
-UID:400jhb1gea4fatopovqrsojtn1@google.com
-CREATED:20241216T225942Z
-LAST-MODIFIED:20241216T225942Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Weekly social #9
 TRANSP:OPAQUE
 END:VEVENT
 END:VCALENDAR
